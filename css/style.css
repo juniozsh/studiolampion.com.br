@@ -160,30 +160,50 @@ body {
         padding-left: 0;
     }
 }
-
 /* Estilização do Footer */
 .footer {
     background-color: #fff;
     color: #222;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo no Footer alinhada à esquerda */
+/* Logo do Footer */
 .footer-logo {
     max-width: 150px;
-    margin-left: 20px;
+    margin-bottom: 15px;
 }
 
-/* Área de conteúdo do Footer alinhada à direita */
-.footer-content {
-    text-align: right;
-    flex: 1;
-    padding-right: 20px;
+/* Links do Footer */
+.footer-nav ul {
+    padding: 0;
+    margin-bottom: 15px;
 }
+
+.footer-nav .list-inline-item {
+    margin: 0 10px;
+}
+
+.footer-nav a {
+    color: #ff8800;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-nav .list-inline-item {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
 
 /* Ajuste para telas menores */
 @media (max-width: 768px) {
