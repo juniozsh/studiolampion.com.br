@@ -109,16 +109,62 @@ body {
     }
 }
 
-/* Estilização do Footer */
-.footer {
-    background-color: #fff; /* Fundo branco */
-    color: #222;
-    padding: 20px;
-    text-align: center;
+
+.perfil-img {
+    max-width: 100%;
+    width: 250px; /* Define um tamanho fixo para manter proporções */
+    height: auto;
+    border-radius: 10px; /* Bordas levemente arredondadas */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Efeito de profundidade */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Logo no Footer */
+/* Responsividade para garantir que a imagem se adapte bem */
+@media (max-width: 768px) {
+    .perfil-img {
+        width: 200px; /* Redução do tamanho para telas menores */
+    }
+}
+/* Estilização do Footer */
+.footer {
+    background-color: #111; /* Cor escura */
+    color: #ccc;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Logo no Footer alinhada à esquerda */
 .footer-logo {
     max-width: 150px;
-    margin-bottom: 10px;
+    margin-left: 20px;
+    filter: brightness(0.8); /* Suaviza a imagem no tema escuro */
+}
+
+/* Área de conteúdo do Footer alinhada à direita */
+.footer-content {
+    text-align: right;
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin: 0 auto 15px auto;
+    }
+
+    .footer-content {
+        text-align: center;
+        padding: 0;
+    }
 }
