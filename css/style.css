@@ -4,17 +4,19 @@ body {
     color: #222;
 }
 
-/* Navbar escura */
+/* Navbar escura refinada */
 .navbar {
     background-color: #222 !important;
+    padding: 15px 20px;
 }
 
-/* Footer escuro */
+/* Footer elegante */
 footer {
     background-color: #222;
     color: #fff;
     padding: 20px;
     text-align: center;
+    font-size: 14px;
 }
 
 /* Estilização dos cards */
@@ -22,20 +24,23 @@ footer {
     border: none;
     border-radius: 15px; /* Cantos arredondados */
     overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     margin-bottom: 20px; /* Espaçamento entre cards */
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Imagens arredondadas */
-.hero-logo {
-    border-radius: 15px; /* Arredonda imagens */
+/* Efeito hover nos cards */
+.card:hover {
+    transform: scale(1.02);
 }
+
+/* Arredondamento apenas na parte superior da imagem */
 .card img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
-
+/* Hero ajustado */
 #hero {
     background-color: #fff;
     padding: 80px 20px;
@@ -43,8 +48,9 @@ footer {
 }
 
 .hero-logo {
-    max-width: 100%;
+    max-width: 200px;
     border-radius: 15px;
+    margin-bottom: 20px;
 }
 
 .hero-image {
@@ -52,25 +58,25 @@ footer {
     border-radius: 15px;
 }
 
+/* Estilo do título e descrição */
 .hero-title {
     font-size: 2.5rem;
     color: #222;
+    font-weight: bold;
 }
 
 .hero-description {
     font-size: 1.2rem;
     color: #444;
 }
-#hero .carousel-control-prev, 
-#hero .carousel-control-next {
-    filter: invert(100%);
-    width: 50px;
-}
 
-/* Botões */
+/* Botões refinados */
 .btn-dark {
     background-color: #222;
     border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .btn-dark:hover {
@@ -78,12 +84,31 @@ footer {
     color: #fff;
 }
 
-/* Responsividade */
+/* Slider com contraste visível */
+#hero .carousel-control-prev, 
+#hero .carousel-control-next {
+    filter: invert(100%);
+    width: 50px;
+}
+
+/* Responsividade aprimorada */
 @media (max-width: 768px) {
-    .navbar-nav {
-        text-align: center;
+    .navbar {
+        background-color: #111 !important;
+    }
+    .navbar-toggler {
+        filter: invert(100%);
+    }
+    .navbar-nav .nav-link {
+        color: #ff8800 !important;
     }
     .carousel-caption {
         font-size: 14px;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-description {
+        font-size: 1rem;
     }
 }
