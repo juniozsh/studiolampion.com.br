@@ -2,23 +2,49 @@
 body {
     background-color: #222;
     color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Navbar refinada com contraste */
+/* Navbar refinada */
 .navbar {
     background-color: #111 !important;
     padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* Logo */
 .navbar-brand img {
     max-height: 50px;
 }
 
+/* Links da Navbar */
+.navbar-nav .nav-link {
+    color: #ff8800 !important;
+    font-weight: bold;
+    padding: 10px;
+}
+
 /* Ajuste para telas menores */
 @media (max-width: 768px) {
-    .navbar-nav .nav-link {
-        color: #ff8800 !important; /* Melhor contraste */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
     }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px;
+        font-size: 1rem;
+    }
+
     .navbar-toggler {
         filter: invert(100%);
     }
@@ -26,16 +52,19 @@ body {
 
 /* Espaçamento entre os cards */
 .card {
-    margin-bottom: 30px;
+    margin: 20px auto;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.08);
 }
 
-/* Arredondamento apenas na parte superior das imagens dos cards */
-.card img {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        margin: 15px auto;
+    }
 }
 
 /* Ajuste do Hero */
@@ -44,13 +73,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     text-align: center;
 }
 
 /* Imagens do Slider */
 .hero-image {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     object-fit: cover;
     border-radius: 15px;
 }
@@ -59,90 +89,93 @@ body {
 .hero-container::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
 }
 
 /* Texto dentro do slider */
 .hero-text {
     position: absolute;
-    z-index: 1;
     color: #fff;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     width: 80%;
+    padding: 20px;
 }
 
-/* Botão chamativo */
-.btn-warning {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-/* Ajustes para telas menores */
+/* Ajuste responsivo */
 @media (max-width: 768px) {
-    .hero-image {
-        height: 70vh; /* Reduz a altura para dispositivos móveis */
-    }
-    .hero-title {
-        font-size: 2rem;
-    }
-    .hero-description {
+    .hero-text {
+        width: 95%;
         font-size: 1rem;
     }
 }
 
-/* Ajustes para telas grandes (1440p) */
-@media (min-width: 1440px) {
-    .hero-title {
-        font-size: 3.5rem;
-    }
-    .hero-description {
-        font-size: 1.8rem;
-    }
-    .card {
-        max-width: 400px;
-        margin: 20px auto;
-    }
+/* Seção Sobre Mim */
+#sobre {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
 }
 
-
+/* Imagem do perfil */
 .perfil-img {
     max-width: 100%;
-    width: 250px; /* Define um tamanho fixo para manter proporções */
+    width: 250px;
     height: auto;
-    border-radius: 10px; /* Bordas levemente arredondadas */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Efeito de profundidade */
-    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
     display: block;
     margin: 0 auto;
 }
 
-/* Responsividade para garantir que a imagem se adapte bem */
+/* Espaçamento entre imagem e texto */
+.col-md-4 {
+    padding-right: 30px;
+}
+
+.col-md-8 {
+    padding-left: 30px;
+}
+
+/* Ajuste para telas menores */
 @media (max-width: 768px) {
-    .perfil-img {
-        width: 200px; /* Redução do tamanho para telas menores */
+    .row {
+        flex-direction: column;
     }
-}/* Estilização do Footer */
+
+    .perfil-img {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .col-md-4 {
+        padding-right: 0;
+    }
+
+    .col-md-8 {
+        padding-left: 0;
+    }
+}
+
+/* Estilização do Footer */
 .footer {
-    background-color: #fff; /* Fundo branco */
-    color: #222; /* Texto escuro para contraste */
+    background-color: #fff;
+    color: #222;
     padding: 20px;
     display: flex;
-    justify-content: space-between; /* Distribui os elementos */
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
 }
 
 /* Logo no Footer alinhada à esquerda */
 .footer-logo {
     max-width: 150px;
     margin-left: 20px;
-    filter: brightness(1); /* Mantém o brilho natural da imagem */
 }
 
 /* Área de conteúdo do Footer alinhada à direita */
@@ -152,7 +185,7 @@ body {
     padding-right: 20px;
 }
 
-/* Ajuste responsivo */
+/* Ajuste para telas menores */
 @media (max-width: 768px) {
     .footer {
         flex-direction: column;
