@@ -1,10 +1,20 @@
-/* Fundo escuro do site */
+/* Importação das fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Lato:wght@300;400;700&display=swap');
+
+/* Definição das fontes */
 body {
+    font-family: 'Lato', sans-serif;
     background-color: #222;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+/* Títulos estilizados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 /* Navbar refinada */
@@ -24,8 +34,9 @@ body {
 /* Links da Navbar */
 .navbar-nav .nav-link {
     color: #ff8800 !important;
-    font-weight: bold;
     padding: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
 }
 
 /* Ajuste para telas menores */
@@ -102,6 +113,8 @@ body {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     width: 80%;
     padding: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
 }
 
 /* Ajuste responsivo */
