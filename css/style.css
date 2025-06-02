@@ -1,11 +1,11 @@
 /* Importação das fontes do Google */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Lato:wght@300;400;700&display=swap');
 
-/* Definição das fontes */
+/* Ajuste do fundo escuro para azul petróleo */
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: #222;
+    background-color: #1a2a33; /* Azul petróleo refinado */
     color: #fff;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navbar refinada */
 .navbar {
-    background-color: #111 !important;
+    background-color: #0f1d2d !important; /* Azul mais escuro */
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -37,6 +37,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff5500;
 }
 
 /* Ajuste para telas menores */
@@ -68,6 +73,12 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
     background: rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito hover nos cards */
+.card:hover {
+    transform: scale(1.05);
 }
 
 /* Ajuste para telas menores */
@@ -102,19 +113,19 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(15, 29, 45, 0.6); /* Azul petróleo com transparência */
     border-radius: 15px;
 }
 
 /* Texto dentro do slider */
 .hero-text {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
     position: absolute;
     color: #fff;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     width: 80%;
     padding: 20px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
 }
 
 /* Ajuste responsivo */
@@ -173,6 +184,7 @@ h1, h2, h3, h4, h5, h6 {
         padding-left: 0;
     }
 }
+
 /* Estilização do Footer */
 .footer {
     background-color: #fff;
@@ -200,7 +212,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-nav a {
     color: #ff8800;
-    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
     text-decoration: none;
     font-size: 1.1rem;
 }
@@ -216,7 +229,6 @@ h1, h2, h3, h4, h5, h6 {
         margin: 5px 0;
     }
 }
-
 
 /* Ajuste para telas menores */
 @media (max-width: 768px) {
