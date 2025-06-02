@@ -1,109 +1,91 @@
-/* Fundo do site */
+/* Fundo escuro do site */
 body {
-    background-color: #fff;
-    color: #222;
+    background-color: #222;
+    color: #fff;
 }
 
-/* Navbar escura refinada */
+/* Navbar refinada com contraste */
 .navbar {
-    background-color: #222 !important;
+    background-color: #111 !important;
     padding: 15px 20px;
 }
 
-/* Footer elegante */
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
+.navbar-brand img {
+    max-height: 50px;
 }
 
-/* Estilização dos cards */
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        color: #ff8800 !important; /* Melhor contraste */
+    }
+    .navbar-toggler {
+        filter: invert(100%);
+    }
+}
+
+/* Espaçamento entre os cards */
 .card {
-    border: none;
-    border-radius: 15px; /* Cantos arredondados */
+    margin-bottom: 30px;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    margin-bottom: 20px; /* Espaçamento entre cards */
-    transition: transform 0.3s ease-in-out;
 }
 
-/* Efeito hover nos cards */
-.card:hover {
-    transform: scale(1.02);
-}
-
-/* Arredondamento apenas na parte superior da imagem */
+/* Arredondamento apenas na parte superior das imagens dos cards */
 .card img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
-/* Hero ajustado */
-#hero {
-    background-color: #fff;
-    padding: 80px 20px;
+/* Ajuste do Hero */
+.hero-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-.hero-logo {
-    max-width: 200px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-}
-
+/* Imagens do Slider */
 .hero-image {
-    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
     border-radius: 15px;
 }
 
-/* Estilo do título e descrição */
-.hero-title {
-    font-size: 2.5rem;
-    color: #222;
+/* Sobreposição escura */
+.hero-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+/* Texto dentro do slider */
+.hero-text {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    width: 80%;
+}
+
+/* Botão chamativo */
+.btn-warning {
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
-.hero-description {
-    font-size: 1.2rem;
-    color: #444;
-}
-
-/* Botões refinados */
-.btn-dark {
-    background-color: #222;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-dark:hover {
-    background-color: #ff8800;
-    color: #fff;
-}
-
-/* Slider com contraste visível */
-#hero .carousel-control-prev, 
-#hero .carousel-control-next {
-    filter: invert(100%);
-    width: 50px;
-}
-
-/* Responsividade aprimorada */
+/* Ajustes para telas menores */
 @media (max-width: 768px) {
-    .navbar {
-        background-color: #111 !important;
-    }
-    .navbar-toggler {
-        filter: invert(100%);
-    }
-    .navbar-nav .nav-link {
-        color: #ff8800 !important;
-    }
-    .carousel-caption {
-        font-size: 14px;
+    .hero-image {
+        height: 70vh; /* Reduz a altura para dispositivos móveis */
     }
     .hero-title {
         font-size: 2rem;
@@ -111,4 +93,32 @@ footer {
     .hero-description {
         font-size: 1rem;
     }
+}
+
+/* Ajustes para telas grandes (1440p) */
+@media (min-width: 1440px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    .hero-description {
+        font-size: 1.8rem;
+    }
+    .card {
+        max-width: 400px;
+        margin: 20px auto;
+    }
+}
+
+/* Estilização do Footer */
+.footer {
+    background-color: #fff; /* Fundo branco */
+    color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Logo no Footer */
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 10px;
 }
