@@ -305,3 +305,42 @@ button.btn:hover {
 .nav.next {
     right: 10px;
 }
+
+/* Ajuste responsivo para telas menores que 500px */
+@media (max-width: 500px) {
+    /* Navbar responsiva */
+    .navbar {
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+        font-size: 1rem;
+    }
+
+    /* Footer responsivo */
+    .footer {
+        padding: 30px 15px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .footer a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+
+    /* Caso tenha imagem no footer, ajustar tamanho e margem */
+    .footer img {
+        max-width: 80px;
+        height: auto;
+        margin: 10px auto;
+        display: block;
+    }
+}
