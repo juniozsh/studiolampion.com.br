@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 <link rel="icon" type="image/x-icon" href="favicon.ico">
+	 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
     <title>Studio Lampion - Apartamento VM</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -12,73 +12,98 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-        <a class="navbar-brand text-white" href="../index.html">Lampion</a>
+        <!-- Logo da empresa -->
+        <a class="navbar-brand" href="#hero">
+            <img src="../img/menu-dark.png" alt="Studio Lampion" class="logo-grande">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link text-white" href="../index.html#hero">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="../index.html#projetos">Projetos</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="../sobre-mim.html#sobre">Sobre Mim</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="../index.html#contato">Contato</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#projetos">Projetos</a></li>
+                <li class="nav-item"><a class="nav-link" href="../sobre-mim.html">Sobre Mim</a></li>
+                <li class="nav-item"><a class="nav-link" href="../contato.html">Contato</a></li>
             </ul>
         </div>
     </div>
 </nav>
-
 <!-- Título e Descrição -->
 <section class="container text-center py-5">
     <h1>Apartamento VM</h1>
-    <p>Uma breve descrição do projeto destacando os conceitos de design utilizados.</p>
+    <p>Este apartamento traz um conceito contemporâneo com materiais premium e iluminação planejada.</p>
 </section>
 
-<!-- Galeria de Fotos -->
 <section class="container py-5">
-    <h2>Galeria de Fotos</h2>
-    <div class="row">
-        <div class="col-md-4">
-            <img src="../img/apartamento-vm/bwc.png" class="img-fluid rounded mb-3" alt="Foto 1">
+    <h2 class="mb-4 text-center">Galeria de Fotos</h2>
+
+    <div id="carouselGaleria" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="4"></button>
         </div>
-        <div class="col-md-4">
-            <img src="../img/apartamento-vm/cozinha.png" class="img-fluid rounded mb-3" alt="Foto 2">
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/apartamento-vm/bwc.png" class="d-block w-100 rounded" alt="Foto 1">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/apartamento-vm/cozinha.png" class="d-block w-100 rounded" alt="Foto 2">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/apartamento-vm/estar.png" class="d-block w-100 rounded" alt="Foto 3">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/apartamento-vm/jantar.png" class="d-block w-100 rounded" alt="Foto 4">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/apartamento-vm/quarto.png" class="d-block w-100 rounded" alt="Foto 5">
+            </div>
         </div>
-        <div class="col-md-4">
-            <img src="../img/apartamento-vm/estar.png" class="img-fluid rounded mb-3" alt="Foto 3">
-        </div>
-		<div class="col-md-4">
-            <img src="../img/apartamento-vm/jantar.png" class="img-fluid rounded mb-3" alt="Foto 3">
-        </div>
-		<div class="col-md-4">
-            <img src="../img/apartamento-vm/quarto.png" class="img-fluid rounded mb-3" alt="Foto 3">
-        </div>
+
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleria" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleria" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+
     </div>
 </section>
+
 <!-- Footer com fundo branco e logo -->
 <footer class="footer">
     <div class="container text-center">
-        <img src="../img/logo.png" alt="Lampion Logo" class="footer-logo">
-        
+        <img src="../img/logo-dark.png" alt="Lampion Logo" class="footer-logo">
+
         <!-- Links do menu no footer -->
         <nav class="footer-nav">
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="../index.html#hero">Home</a></li>
+                <li class="list-inline-item"><a href="../index.html">Home</a></li>
                 <li class="list-inline-item"><a href="../index.html#projetos">Projetos</a></li>
-                <li class="list-inline-item"><a href="../sobre-mim.html##sobre">Sobre Mim</a></li>
-                <li class="list-inline-item"><a href="../index.html#contato">Contato</a></li>
+                <li class="list-inline-item"><a href="../sobre-mim.html">Sobre Mim</a></li>
+                <li class="list-inline-item"><a href="../contato.html">Contato</a></li>
             </ul>
         </nav>
 
         <p>&copy; 2025 Lampion - Designer de Interiores</p>
         <p>Siga-nos no <a href="https://www.instagram.com/studiolampion" class="text-warning" target="_blank">Instagram</a> |
-           <a href="mailto:contato@lampion.com" class="text-warning">Email</a></p>
+            <a href="mailto:contato@lampion.com" class="text-warning">Email</a></p>
         <p>Desenvolvido por <strong>Samuel Oliveira</strong> - Analista de Desenvolvimento de Sistemas - Descomplica</p>
     </div>
 </footer>
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
