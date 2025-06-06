@@ -343,4 +343,10 @@ button.btn:hover {
         margin: 10px auto;
         display: block;
     }
+    .navbar img {
+        max-width: 80px;
+        height: auto;
+        margin: 10px auto;
+        display: block;
+    }
 }
