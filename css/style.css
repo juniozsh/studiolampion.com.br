@@ -1,13 +1,14 @@
 /* Importação das fontes do Google */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Merriweather:wght@300;400&family=Montserrat:wght@400;700&display=swap');
 
 /* Ajuste do fundo escuro para azul petróleo */
 body {
-    background-color: #1a2a33; /* Azul petróleo refinado */
+    background-color: #1a2a33;
     color: #fff;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Merriweather', serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 /* Títulos estilizados */
@@ -19,77 +20,62 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navbar refinada */
 .navbar {
-    background-color: #0f1d2d !important; /* Azul mais escuro */
-    padding: 15px 20px;
+    background-color: #0f1d2d;
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* Logo */
-.navbar-brand img {
-    max-height: 50px;
+/* Estilo da Logo */
+.logo-grande {
+    max-height: 80px; /* Tamanho grande */
+    width: auto;
 }
 
 /* Links da Navbar */
 .navbar-nav .nav-link {
-    color: #ff8800 !important;
-    padding: 10px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #FFD700 !important;
+    padding: 12px 15px;
     transition: color 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #ff5500;
+    color: #FFA500;
 }
 
-/* Ajuste para telas menores */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .navbar-nav {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .navbar-nav .nav-link {
-        padding: 8px;
-        font-size: 1rem;
-    }
-
-    .navbar-toggler {
-        filter: invert(100%);
-    }
+/* Botões sem sombra */
+.btn {
+    background-color: #00CFFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
-/* Espaçamento entre os cards */
+.btn:hover {
+    background-color: #0088CC;
+}
+
+/* Cards */
 .card {
-    margin: 20px auto;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
     background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 20px;
     transition: transform 0.3s ease-in-out;
 }
 
-/* Efeito hover nos cards */
 .card:hover {
     transform: scale(1.05);
 }
 
-/* Ajuste para telas menores */
-@media (max-width: 768px) {
-    .card {
-        width: 90%;
-        margin: 15px auto;
-    }
-}
-
-/* Ajuste do Hero */
+/* Hero Section */
 .hero-container {
     position: relative;
     display: flex;
@@ -99,7 +85,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-/* Imagens do Slider */
 .hero-image {
     width: 100%;
     height: 80vh;
@@ -107,17 +92,15 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 15px;
 }
 
-/* Sobreposição escura */
 .hero-container::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(15, 29, 45, 0.6); /* Azul petróleo com transparência */
+    background: rgba(15, 29, 45, 0.6);
     border-radius: 15px;
 }
 
-/* Texto dentro do slider */
 .hero-text {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
@@ -128,15 +111,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
 }
 
-/* Ajuste responsivo */
-@media (max-width: 768px) {
-    .hero-text {
-        width: 95%;
-        font-size: 1rem;
-    }
-}
-
-/* Seção Sobre Mim */
+/* Seção Sobre */
 #sobre {
     max-width: 900px;
     margin: 40px auto;
@@ -151,24 +126,47 @@ h1, h2, h3, h4, h5, h6 {
     width: 250px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
     display: block;
     margin: 0 auto;
 }
 
-/* Espaçamento entre imagem e texto */
-.col-md-4 {
-    padding-right: 30px;
+/* Footer */
+.footer {
+    background-color: #0f1d2d;
+    color: #FFD700;
+    padding: 30px 20px;
+    text-align: center;
 }
 
-.col-md-8 {
-    padding-left: 30px;
+/* Links do Footer */
+.footer a {
+    color: #FFA500;
+    text-decoration: none;
 }
 
-/* Ajuste para telas menores */
+.footer a:hover {
+    color: #FF4500;
+}
+
+/* Ajustes Responsivos */
 @media (max-width: 768px) {
-    .row {
+    .navbar {
         flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-grande {
+        max-height: 60px; /* Ajuste da logo em telas menores */
+    }
+
+    .hero-text {
+        width: 95%;
+        font-size: 1rem;
     }
 
     .perfil-img {
@@ -176,73 +174,8 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 20px;
     }
 
-    .col-md-4 {
-        padding-right: 0;
-    }
-
-    .col-md-8 {
-        padding-left: 0;
-    }
-}
-
-/* Estilização do Footer */
-.footer {
-    background-color: #fff;
-    color: #222;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Logo do Footer */
-.footer-logo {
-    max-width: 150px;
-    margin-bottom: 15px;
-}
-
-/* Links do Footer */
-.footer-nav ul {
-    padding: 0;
-    margin-bottom: 15px;
-}
-
-.footer-nav .list-inline-item {
-    margin: 0 10px;
-}
-
-.footer-nav a {
-    color: #ff8800;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.footer-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
     .footer-nav .list-inline-item {
         display: block;
         margin: 5px 0;
-    }
-}
-
-/* Ajuste para telas menores */
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-logo {
-        margin: 0 auto 15px auto;
-    }
-
-    .footer-content {
-        text-align: center;
-        padding: 0;
     }
 }
